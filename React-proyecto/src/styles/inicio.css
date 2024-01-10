@@ -1,0 +1,71 @@
+
+/* Estilos para un contenedor de carrusel */
+.container_carrusel {
+    position: center;
+    width: 320px;
+    height: 600px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+}
+
+/* Estilos para las caras del carrusel */
+.carousel__face {
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 80px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 255 0 0 2000px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+main{
+    margin-left:250px;
+}
+
+/* Estilos para las imágenes de las caras del carrusel */
+.carousel__face:nth-child(1) {
+    background-image: url("../styles/Anime/ANSATSU.jpg");
+    transform: rotateY(0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+    background-image: url("../styles/Franquicia/lotr.jpeg");
+    transform: rotateY(90deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+    background-image: url("../styles/Videojuegos/BIOSHOCK.jpg");
+    transform: rotateY(180deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4){
+    background-image: url("../styles/Pintering/pintura.jpg");
+    transform: rotateY(270deg) translateZ(430px);
+}
+
+/* Estilos para el elemento con ID 'wrapper' (fondo negro) */
+.wrapper {
+    background-color: #000000;
+}
+
+/* Animación para rotar el carrusel */
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
